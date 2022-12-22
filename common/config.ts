@@ -9,6 +9,10 @@ export default class TTCSconfig {
     static LOGIN_TOKEN_INVALID = 8;
     static LOGIN_WAIT_FOR_EMAIL_VERIFICATION = 9;
 
+    static STATUS_PUBLIC = 1;
+    static STATUS_SUCCESS = 0;
+    static STATUS_FAIL = -1;
+
     static UserStatus = Object.freeze({
         NOT_ACTIVATED: -2,
         DELETED: -1,
