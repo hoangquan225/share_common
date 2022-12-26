@@ -8,4 +8,5 @@ export default class ENDPONTAPI {
     static UPLOAD = "/upload";
 
     static GET_USER_FROM_TOKEN = "/get-user-from-token";
+    static CHANGE_PASSWORD = "/change-password";
 }
