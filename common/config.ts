@@ -13,6 +13,26 @@ export default class TTCSconfig {
     static STATUS_SUCCESS = 0;
     static STATUS_FAIL = -1;
 
+    static GENDER_MALE = 1;
+    static GENDER_FEMALE = 2;
+    static GENDER_OTHER = 3;
+
+    static GENDERS = [
+        {
+            value: TTCSconfig.GENDER_MALE,
+            label: 'Nam'
+        }, 
+        {
+            value: TTCSconfig.GENDER_FEMALE,
+            label: 'Nữ'
+        }, 
+        {
+            value: TTCSconfig.GENDER_OTHER,
+            label: 'Khác'
+        }, 
+
+    ]
+
     static UserStatus = Object.freeze({
         NOT_ACTIVATED: -2,
         DELETED: -1,
