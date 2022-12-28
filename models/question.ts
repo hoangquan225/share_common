@@ -12,7 +12,7 @@ class Question {
     questionChild : string[] | undefined;
     parentId: string|undefined;
     status: number;
-    idTopic : string
+    idTopic : string | undefined;
     createDate ?: number; 
     updateDate ?: number;
 
@@ -22,7 +22,7 @@ class Question {
         this.result = args?.result ?? [];
         this.answer = args?.answer ?? [];
         this.status = args?.status ?? 0; 
-        this.idTopic = args?.idCourse ?? '';
+        this.idTopic = args?.idCourse ?? undefined;
         this.questionChild = args?.questionChild ?? undefined;
         this.parentId = args?.parentId ?? undefined;
         this.createDate = args?.createDate ?? undefined; 

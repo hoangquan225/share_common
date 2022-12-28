@@ -4,8 +4,9 @@ class Course {
     courseName: string;
     status: number;
     des: string;
-    idCategory: string; // danh mục : lớp 1,2,3,...
-    idTag: string; // môn học vd : toán lý hóa ....
+    slug: string;
+    idCategory: string | undefined; // danh mục : lớp 1,2,3,...
+    idTag: string | undefined; // môn học vd : toán lý hóa ....
     createDate ?: number;
     updateDate ?: number; 
 
@@ -13,9 +14,10 @@ class Course {
         this.id = args?.id ?? undefined;
         this.courseName = args?.courseName ?? ''
         this.status = args?.status ?? 0;
-        this.des = args?.des ?? ''
-        this.idCategory = args?.idCategory ?? '';
-        this.idTag = args?.idTag ?? '';
+        this.des = args?.des ?? '';
+        this.slug = args?.slug ?? '';
+        this.idCategory = args?.idCategory ?? undefined;
+        this.idTag = args?.idTag ?? undefined;
         this.createDate = args?.createDate ?? undefined; 
         this.updateDate = args?.updateDate ?? undefined;
     }

@@ -1,7 +1,7 @@
 class Lesson {
     id: string | undefined;
     status: number;
-    idTopic : string;
+    idTopic : string | undefined;
     file?: string;
     createDate ?: number; 
     updateDate ?: number;
@@ -9,7 +9,7 @@ class Lesson {
     constructor(args?: any) {
         this.id = args?.id ?? undefined;
         this.status = args?.status ?? 0; 
-        this.idTopic = args?.idCourse ?? '';
+        this.idTopic = args?.idCourse ?? undefined;
         this.file = args?.file ?? ''
         this.createDate = args?.createDate ?? undefined; 
         this.updateDate = args?.updateDate ?? undefined;
