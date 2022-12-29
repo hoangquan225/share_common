@@ -12,6 +12,7 @@ export default class TTCSconfig {
     static STATUS_PUBLIC = 1;
     static STATUS_SUCCESS = 0;
     static STATUS_FAIL = -1;
+    static STATUS_NO_EXIST = 2;
 
     static GENDER_MALE = 1;
     static GENDER_FEMALE = 2;

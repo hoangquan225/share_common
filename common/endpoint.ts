@@ -10,4 +10,9 @@ export default class ENDPONTAPI {
   static UPLOAD = "/upload";
 
   static GET_USER_FROM_TOKEN = "/get-user-from-token";
+
+
+  // category 
+  static GET_CATEGORYS_BY_STATUS = '/category/load-category-by-status'
+  static UPDATE_CATEGORY = '/category/update-category'
 }

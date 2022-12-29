@@ -17,7 +17,7 @@ class Question {
     updateDate ?: number;
 
     constructor(args?: any) {
-        this.id = args?.id ?? undefined;
+        this.id = args?._id ?? undefined;
         this.question = args?.question ?? '';
         this.result = args?.result ?? [];
         this.answer = args?.answer ?? [];

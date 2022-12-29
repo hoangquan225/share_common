@@ -9,7 +9,7 @@ class Topic {
     updateDate ?: number;
 
     constructor(args?:any) {
-        this.id = args?.id ?? undefined; 
+        this.id = args?._id ?? undefined; 
         this.name = args?.name ?? ''; 
         this.status = args?.status ?? 0; 
         this.idCourse = args?.idCourse ?? '';

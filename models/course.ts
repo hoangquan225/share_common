@@ -11,7 +11,7 @@ class Course {
     updateDate ?: number; 
 
     constructor(args?: any) {
-        this.id = args?.id ?? undefined;
+        this.id = args?._id ?? undefined;
         this.courseName = args?.courseName ?? ''
         this.status = args?.status ?? 0;
         this.des = args?.des ?? '';

@@ -7,7 +7,7 @@ class Lesson {
     updateDate ?: number;
 
     constructor(args?: any) {
-        this.id = args?.id ?? undefined;
+        this.id = args?._id ?? undefined;
         this.status = args?.status ?? 0; 
         this.idTopic = args?.idCourse ?? undefined;
         this.file = args?.file ?? ''
