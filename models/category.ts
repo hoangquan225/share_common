@@ -1,5 +1,5 @@
 class Category {
-    id: string | undefined; 
+    id?: string | undefined; 
     name: string;
     status: number;
     slug: string;
