@@ -2,7 +2,7 @@ class Category {
     id?: string | undefined; 
     name: string;
     status: number;
-    avatar?: string;
+    avatar: string | null;
     des: string;
     slug: string;
     createDate ?: number;
@@ -12,7 +12,7 @@ class Category {
         this.id = args?._id ?? undefined;
         this.name = args?.name ?? '';
         this.status = args?.status ?? 0;
-        this.avatar = args?.avatar ?? "";
+        this.avatar = args?.avatar ?? null;
         this.des = args?.des ?? '';
         this.slug = args?.slug ?? '';
         this.createDate = args?.createDate ?? undefined; 
