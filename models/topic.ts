@@ -1,5 +1,5 @@
 class Topic { 
-    id: string | undefined; 
+    id?: string | undefined; 
     name: string; 
     status: number; 
     idCourse: string; 

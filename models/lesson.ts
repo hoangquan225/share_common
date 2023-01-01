@@ -1,5 +1,5 @@
 class Lesson {
-    id: string | undefined;
+    id?: string | undefined;
     status: number;
     idTopic : string | undefined;
     file?: string;

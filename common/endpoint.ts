@@ -15,6 +15,7 @@ export default class ENDPONTAPI {
   // category 
   static GET_CATEGORYS_BY_STATUS = '/category/load-category-by-status'
   static UPDATE_CATEGORY = '/category/update-category'
+  static ORDER_CATEGORY = '/category/order-category'
 
   // course 
   static GET_COURSES_BY_STATUS = '/course/load-course-by-status'

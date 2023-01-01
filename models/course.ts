@@ -1,6 +1,6 @@
 
 class Course {
-    id: string | undefined;
+    id?: string | undefined;
     courseName: string;
     status: number;
     avatar: string | null;
