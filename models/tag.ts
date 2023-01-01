@@ -1,6 +1,6 @@
 class Tag {
     // môn hoc
-    id: string | undefined; 
+    id?: string | undefined; 
     name: string;
     status: number;
     idCategory: string[]; // môn học thuộc lớp nào

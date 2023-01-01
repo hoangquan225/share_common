@@ -1,5 +1,5 @@
 class Question {
-    id: string | undefined;
+    id?: string | undefined;
     question: string;
     result: {
         index: number,
