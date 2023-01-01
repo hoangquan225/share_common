@@ -21,6 +21,7 @@ export default class ENDPONTAPI {
   static GET_COURSES_BY_STATUS = '/course/load-course-by-status'
   static UPDATE_COURSE = '/course/update-course'
   static GET_COURSES_BY_ID_CATEGORY = '/course/load-course-by-id-category'
+  static GET_COURSES_BY_ID_TAG_AND_CATEGORY = '/course/load-course-by-id-tag-and-category'
 
   // lesson 
   static GET_LESSONS_BY_STATUS = '/lesson/load-lesson-by-status'
