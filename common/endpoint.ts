@@ -34,6 +34,7 @@ export default class ENDPONTAPI {
   // tag 
   static GET_TAGS_BY_STATUS = '/tag/load-tag-by-status'
   static UPDATE_TAG = '/tag/update-tag'
+  static GET_TAGS_BY_ID_CATEGORY = '/tag/load-tag-by-id-category'
 
   // topic 
   static GET_TOPICS_BY_STATUS = '/topic/load-topic-by-status'
