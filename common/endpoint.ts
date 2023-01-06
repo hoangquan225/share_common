@@ -38,5 +38,7 @@ export default class ENDPONTAPI {
 
   // topic 
   static GET_TOPICS_BY_STATUS = '/topic/load-topic-by-status'
+  static GET_TOPICS_BY_ID_COURSE = '/topic/load-topic-by-id-course'
   static UPDATE_TOPIC = '/topic/update-topic'
+  static GET_TOPICS_BY_PARENT_ID = '/topic/load-topic-by-parent-id'
 }
