@@ -10,7 +10,7 @@ class Category {
     updateDate ?: number;
 
     constructor(args?: any){
-        this.id = args?._id ?? undefined;
+        this.id = args?._id ?? args?.id ?? undefined;
         this.name = args?.name ?? '';
         this.status = args?.status ?? 0;
         this.avatar = args?.avatar ?? null;

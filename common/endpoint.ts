@@ -32,6 +32,7 @@ export default class ENDPONTAPI {
   // question 
   static GET_QUESTIONS_BY_STATUS = '/question/load-question-by-status'
   static UPDATE_QUESTION = '/question/update-question'
+  static ORDER_QUESTION = '/question/orderQuestion'
 
   // tag 
   static GET_TAGS_BY_STATUS = '/tag/load-tag-by-status'
@@ -44,4 +45,5 @@ export default class ENDPONTAPI {
   static UPDATE_TOPIC = '/topic/update-topic'
   static GET_TOPICS_BY_PARENT_ID = '/topic/load-topic-by-parent-id'
   static GET_TOPIC_BY_COURSE = '/topic/getTopicByCourse'
+  static ORDER_TOPIC = '/topic/orderTopic'
 }
