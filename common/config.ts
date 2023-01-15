@@ -13,6 +13,7 @@ export default class TTCSconfig {
     static STATUS_PRIVATE = 0;
     static STATUS_DELETED = -1;
     static STATUS_SUCCESS = 0;
+    static RESPONSIVE_NULL = 1;
     static STATUS_FAIL = -1;
     static STATUS_NO_EXIST = 2;
 

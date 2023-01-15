@@ -5,10 +5,13 @@ class Topic {
     idCourse: string; 
     topicChild: string[];
     parentId: string | null;
-    type: number;
+    type: number; // type = 1 chương trình học , type = 2 đề kiểm tra
+    topicType: number | null; // 1 : chuong, 2 : bài tập, 3: đề kiểm tra
+    timeExam ?: number; // thời gian làm bài kiểm tra
+    numQuestion ?: number;
     des: string;
     index: number;
-    createDate ?: number; 
+    createDate ?: number;
     updateDate ?: number;
 
     constructor(args?:any) {
@@ -23,6 +26,9 @@ class Topic {
         this.index = args?.index ?? 0;
         this.createDate = args?.createDate ?? undefined; 
         this.updateDate = args?.updateDate ?? undefined;
+        this.topicType = args?.topicType ?? null;
+        this.timeExam = args?.time ?? 0;
+        this.numQuestion = args?.numQuestion ?? 0;
     }
 }
 
