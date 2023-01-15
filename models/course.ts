@@ -1,3 +1,5 @@
+import { isObject } from "../utils/validation";
+import { Category } from "./category";
 
 class Course {
     id?: string | undefined;
@@ -7,6 +9,7 @@ class Course {
     des: string;
     slug: string;
     idCategory: string | undefined; // danh mục : lớp 1,2,3,...
+    category: Category | null;
     idTag: string | undefined; // môn học vd : toán lý hóa ....
     createDate ?: number;
     updateDate ?: number; 
@@ -18,7 +21,8 @@ class Course {
         this.avatar = args?.avatar ?? null;
         this.des = args?.des ?? '';
         this.slug = args?.slug ?? '';
-        this.idCategory = args?.idCategory ?? undefined;
+        this.idCategory = isObject(args.idCategory) ? new Category(args.idCategory)?.id : (args?.idCategory ?? undefined);
+        this.category = isObject(args.idCategory) ? new Category(args.idCategory) : null; 
         this.idTag = args?.idTag ?? undefined;
         this.createDate = args?.createDate ?? undefined; 
         this.updateDate = args?.updateDate ?? undefined;

@@ -8,3 +8,7 @@ export function isValidEmail(email: string) {
 export function isValidPhone(phone: string) {
   return PhoneRegExp.test(phone);
 }
+
+export const isObject = (arg?: any) => {
+  return arg && (JSON.parse(JSON.stringify(arg))).constructor === Object;
+}

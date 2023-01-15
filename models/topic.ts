@@ -1,13 +1,17 @@
+import { isObject } from "../utils/validation";
+
 class Topic { 
     id?: string | undefined; 
     name: string; 
     status: number; 
     idCourse: string; 
     topicChild: string[];
+    topicChildData: Topic[];
     parentId: string | null;
     type: number; // type = 1 chương trình học , type = 2 đề kiểm tra
-    topicType: number | null; // 1 : chuong, 2 : bài tập, 3: đề kiểm tra
+    topicType: number | null; // 1 : chuong, 2 : bài tập, 3: đề kiểm tra, 4: video
     timeExam ?: number; // thời gian làm bài kiểm tra
+    video ?: string | null; //video bai giang
     numQuestion ?: number;
     des: string;
     index: number;
@@ -19,7 +23,8 @@ class Topic {
         this.name = args?.name ?? ''; 
         this.status = args?.status ?? 0; 
         this.idCourse = args?.idCourse ?? '';
-        this.topicChild = args?.topicChild ?? [];
+        this.topicChild = isObject(args.topicChild[0]) ? args.topicChild.map((o: any) => o._id ?? '') : (args?.topicChild ?? []) ;
+        this.topicChildData = isObject(args.topicChild[0]) ? args.topicChild.map((o: any) => new Topic(o)) : []
         this.parentId = args?.parentId ?? null;
         this.type = args?.type ?? 1;
         this.des = args?.des ?? '';
@@ -29,6 +34,7 @@ class Topic {
         this.topicType = args?.topicType ?? null;
         this.timeExam = args?.time ?? 0;
         this.numQuestion = args?.numQuestion ?? 0;
+        this.video = args?.video ?? null;
     }
 }
 
