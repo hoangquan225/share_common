@@ -9,7 +9,7 @@ class Topic {
     topicChildData: Topic[];
     parentId: string | null;
     type: number; // type = 1 chương trình học , type = 2 đề kiểm tra
-    topicType: number | null; // 1 : chuong, 2 : bài tập, 3: đề kiểm tra, 4: video
+    topicType: number | null; // 1 : chuong, 2 : bài tập, 3: đề kiểm tra, 4: video, 5: document
     timeExam ?: number; // thời gian làm bài kiểm tra
     video ?: string | null; //video bai giang
     numQuestion ?: number;
