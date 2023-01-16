@@ -23,8 +23,8 @@ class Topic {
         this.name = args?.name ?? ''; 
         this.status = args?.status ?? 0; 
         this.idCourse = args?.idCourse ?? '';
-        this.topicChild = isObject(args.topicChild[0]) ? args.topicChild.map((o: any) => o._id ?? '') : (args?.topicChild ?? []) ;
-        this.topicChildData = isObject(args.topicChild[0]) ? args.topicChild.map((o: any) => new Topic(o)) : []
+        this.topicChild = args.topicChild ? (isObject(args.topicChild[0]) ? args.topicChild?.map((o: any) => o._id ?? '') : args?.topicChild) : [] ;
+        this.topicChildData = args.topicChild ? (isObject(args.topicChild[0]) ? args.topicChild?.map((o: any) => new Topic(o)) : []) : []
         this.parentId = args?.parentId ?? null;
         this.type = args?.type ?? 1;
         this.des = args?.des ?? '';
