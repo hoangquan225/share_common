@@ -32,7 +32,7 @@ class Topic {
         this.createDate = args?.createDate ?? undefined; 
         this.updateDate = args?.updateDate ?? undefined;
         this.topicType = args?.topicType ?? null;
-        this.timeExam = args?.time ?? 0;
+        this.timeExam = args?.timeExam ?? 0;
         this.numQuestion = args?.numQuestion ?? 0;
         this.video = args?.video ?? null;
     }
