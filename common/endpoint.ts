@@ -48,4 +48,6 @@ export default class ENDPONTAPI {
   static GET_TOPICS_BY_PARENT_ID = '/topic/load-topic-by-parent-id'
   static GET_TOPIC_BY_COURSE = '/topic/getTopicByCourse'
   static ORDER_TOPIC = '/topic/orderTopic'
+  static GET_TOPIC_BY_ID = '/topic/load-topic-by-id'
+  
 }
