@@ -27,7 +27,7 @@ export default class ENDPONTAPI {
 
   // lesson 
   static GET_LESSONS_BY_STATUS = '/lesson/load-lesson-by-status'
-  static GET_LESSONS_BY_COURSE = '/lesson/load-lesson-by-idCourse'
+  static GET_LESSONS_BY_IDTOPIC = '/lesson/load-lesson-by-idTopic'
   static UPDATE_LESSON = '/lesson/update-lesson'
 
   // question 

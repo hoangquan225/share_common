@@ -11,8 +11,8 @@ class Lesson {
     constructor(args?: any) {
         this.id = args?._id ?? args?.id ?? undefined;
         this.status = args?.status ?? 0; 
-        this.idTopic = args?.idCourse ?? undefined;
-        this.video = args?.file ?? ''
+        this.idTopic = args?.idTopic ?? undefined;
+        this.video = args?.video ?? ''
         this.createDate = args?.createDate ?? undefined; 
         this.updateDate = args?.updateDate ?? undefined;
         this.des = args?.des ?? '';
