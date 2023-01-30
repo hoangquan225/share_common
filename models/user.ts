@@ -19,6 +19,11 @@ class UserInfo {
     age?: number = 0;
     lastLogin?: number;
     status?:number;
+    progess ?: {
+        idTopic: string, // id bài học
+        status: number, // trạng thái đã học, chưa học, đang học
+        timeStudy: number, // thời gian học bài đó (tính bằng giây)
+    }[]; // bài học đã học
     constructor(args?: any) {
         if (!args) {
             args = {};
@@ -40,6 +45,7 @@ class UserInfo {
         this.token = args.token ?? "";
         this.lastLogin = args.lastLogin ?? Date.now()
         this.status = args.status ?? 1;
+        this.progess = args.progess ?? undefined;
     }
 }
 

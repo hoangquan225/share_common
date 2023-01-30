@@ -6,11 +6,14 @@ export default class ENDPONTAPI {
   static UPDATE_USER = "/update-user";
   static LOAD_USER_BY_ID = "/load-user-by-id";
   static CHANGE_PASSWORD = "/change-password";
-
-  static UPLOAD = "/upload";
+  static UPDATE_STUDYED_FOR_USER = "/user/updateStudyedForUser";
 
   static GET_USER_FROM_TOKEN = "/get-user-from-token";
 
+  // upload 
+  static UPLOAD = "/upload";
+  static UPLOAD_MULTIPLE = "/upload-multiple";
+  static UPLOAD_MULTIPLE_VIDEO = "/upload-multiple-video";
 
   // category 
   static GET_CATEGORYS_BY_STATUS = '/category/load-category-by-status'
