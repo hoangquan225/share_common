@@ -7,7 +7,9 @@ class Question {
     }[]; // đáp án đúng: có thể có nhiều đáp án đúng
     answer: {
         index: number,
-        text: string
+        text: string,
+        isResult: boolean,
+        _id?: string | null
     }[]; // đáp án,
     questionChild : string[] | null;
     parentId: string|null;
