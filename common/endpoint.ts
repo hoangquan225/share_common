@@ -7,6 +7,7 @@ export default class ENDPONTAPI {
   static LOAD_USER_BY_ID = "/load-user-by-id";
   static CHANGE_PASSWORD = "/change-password";
   static UPDATE_STUDYED_FOR_USER = "/user/updateStudyedForUser";
+  static GET_TOTAL_LEARNED_TOPIC = "/user/getTotalLearnedTopic";
 
   static GET_USER_FROM_TOKEN = "/get-user-from-token";
 
