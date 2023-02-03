@@ -23,6 +23,12 @@ class UserInfo {
         idTopic: string, // id bài học
         status: number, // trạng thái đã học, chưa học, đang học
         timeStudy: number, // thời gian học bài đó (tính bằng giây)
+        score: number,
+        correctQuestion: number,
+        answers: {
+            idQuestion : string, 
+            idAnswer: string
+        }[], 
     }[]; // bài học đã học
     constructor(args?: any) {
         if (!args) {

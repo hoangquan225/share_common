@@ -15,7 +15,6 @@ class Topic {
   numQuestion?: number;
   des: string;
   index: number;
-  score: number | null;
   createDate?: number;
   updateDate?: number;
 
@@ -38,7 +37,6 @@ class Topic {
     this.type = args?.type ?? 1;
     this.des = args?.des ?? "";
     this.index = args?.index ?? 0;
-    this.score = args?.score ?? null;
     this.createDate = args?.createDate ?? undefined;
     this.updateDate = args?.updateDate ?? undefined;
     this.topicType = args?.topicType ?? null;
