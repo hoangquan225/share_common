@@ -52,5 +52,10 @@ export default class ENDPONTAPI {
   static GET_TOPIC_BY_COURSE = '/topic/getTopicByCourse'
   static ORDER_TOPIC = '/topic/orderTopic'
   static GET_TOPIC_BY_ID = '/topic/load-topic-by-id'
+
+  // feedback 
+  static GET_FEEDBACKS = '/loadFeedbacks'
+  static GET_FEEDBACKS_BY_COURSE = '/loadFeedbacksByIdCourse'
+  static CREATE_FEEDBACK = '/createFeedback'
   
 }
