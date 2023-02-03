@@ -10,7 +10,7 @@ class Feedback {
     idUser: string | undefined;
     dataUser: UserInfo | null;
     dataQuestion: Question | null;
-    type : number | null; // loại feedback , 
+    type : number[]; // loại feedback , 
     content: string;
     createDate?: number;
     updateDate?: number
@@ -22,7 +22,7 @@ class Feedback {
         this.dataQuestion = isObject(args.idQuestion) ? new Question(args.idQuestion) : null; 
         this.idUser = isObject(args.idUser) ? new UserInfo(args.idUser)?._id : (args?.idUser ?? undefined);
         this.dataUser = isObject(args.idUser) ? new UserInfo(args.idUser) : null; 
-        this.type = args?.type ?? null;
+        this.type = args?.type ?? [];
         this.content = args?.content ?? '';
         this.idCourse = args?.idCourse ?? undefined; 
         this.createDate = args?.createDate ?? undefined
