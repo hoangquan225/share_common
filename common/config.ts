@@ -22,6 +22,17 @@ export default class TTCSconfig {
   static GENDER_FEMALE = 2;
   static GENDER_OTHER = 3;
 
+  // type topic
+  static TYPE_TOPIC_VIDEO = 4; // tiết học
+  static TYPE_TOPIC_PARENT = 1; // chương học
+  static TYPE_TOPIC_PRATICE = 2; // bài tập
+  static TYPE_TOPIC_EXAM = 3; // đề kiểm tra
+  static TYPE_TOPIC_DOCUMENT = 5; // tài liệu
+
+  // loại đề mục 
+  static TYPE_LESSON = 1 ; // chương trình học
+  static TYPE_EXAM = 2 ; // đề kiểm tra
+
   static GENDERS = [
     {
       value: TTCSconfig.GENDER_MALE,
