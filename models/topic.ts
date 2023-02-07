@@ -1,3 +1,4 @@
+import TTCSconfig from "../common/config";
 import { isObject } from "../utils/validation";
 
 class Topic {
@@ -21,14 +22,14 @@ class Topic {
   constructor(args?: any) {
     this.id = args?._id ?? args?.id ?? undefined;
     this.name = args?.name ?? "";
-    this.status = args?.status ?? 0;
+    this.status = args?.status ?? TTCSconfig.STATUS_PUBLIC;
     this.idCourse = args?.idCourse ?? "";
-    this.topicChild = args.topicChild
+    this.topicChild = args?.topicChild
       ? isObject(args.topicChild[0])
         ? args.topicChild?.map((o: any) => o._id ?? "")
         : args?.topicChild
       : [];
-    this.topicChildData = args.topicChild
+    this.topicChildData = args?.topicChild
       ? isObject(args.topicChild[0])
         ? args.topicChild?.map((o: any) => new Topic(o))
         : []

@@ -16,6 +16,7 @@ class Question {
     status: number;
     idTopic : string | null;
     index: number;
+    hint:string;
     createDate ?: number; 
     updateDate ?: number;
 
@@ -29,6 +30,7 @@ class Question {
         this.questionChild = args?.questionChild ?? null;
         this.parentId = args?.parentId ?? null;
         this.index = args?.index ?? 0;
+        this.hint = args?.hint ?? '';
         this.createDate = args?.createDate ?? undefined; 
         this.updateDate = args?.updateDate ?? undefined;
     }
