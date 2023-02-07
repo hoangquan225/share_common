@@ -7,6 +7,7 @@ class Course {
     status: number;
     avatar: string | null;
     des: string;
+    shortDes: String;
     slug: string;
     idCategory: string | undefined; // danh mục : lớp 1,2,3,...
     category: Category | null;
@@ -20,6 +21,7 @@ class Course {
         this.status = args?.status ?? 0;
         this.avatar = args?.avatar ?? null;
         this.des = args?.des ?? '';
+        this.shortDes = args?.shortDes ?? '';
         this.slug = args?.slug ?? '';
         this.idCategory = isObject(args.idCategory) ? new Category(args.idCategory)?.id : (args?.idCategory ?? undefined);
         this.category = isObject(args.idCategory) ? new Category(args.idCategory) : null; 
