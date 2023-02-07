@@ -22,6 +22,10 @@ export default class TTCSconfig {
   static GENDER_FEMALE = 2;
   static GENDER_OTHER = 3;
 
+  // user role 
+  static ROLE_ADMIN = 0;
+  static ROLE_USER = 1;
+
   // type topic
   static TYPE_TOPIC_VIDEO = 4; // tiết học
   static TYPE_TOPIC_PARENT = 1; // chương học
