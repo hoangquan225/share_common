@@ -14,11 +14,12 @@ class Topic {
   topicType: number | null; // 1 : chuong, 2 : bài tập, 3: đề kiểm tra, 4: video, 5: document
   timeExam?: number; // thời gian làm bài kiểm tra
   video?: string | null; //video bai giang
-  timePracticeInVideo?: { // thời gian xem video sẽ có bài tập, được chọn nhiều thời gian trong video 
-    time: number,
-    totalQuestion: number,
-    idQuestion: string[],
-    questionData: Question[]
+  timePracticeInVideo?: {
+    // thời gian xem video sẽ có bài tập, được chọn nhiều thời gian trong video
+    time: number;
+    totalQuestion: number;
+    idQuestion: string[];
+    questionData: Question[];
   }[];
   numQuestion?: number;
   des: string;
@@ -42,20 +43,22 @@ class Topic {
         : []
       : [];
     this.parentId = args?.parentId ?? null;
-    this.timePracticeInVideo = args?.timePracticeInVideo.map((item: any) => {
-      if (isObject(item.idQuestion[0])) {
-        return {
-          time: item.time,
-          totalQuestion: item.totalQuestion,
-          questionData: item.idQuestion?.map(o => new Question(o)),
-          idQuestion: item.idQuestion.map(o => o._id ?? "")
-        }
-      } else return {
-        time: item.time,
-        totalQuestion: item.totalQuestion,
-        idQuestion: item.idQuestion
-      }
-    }) ?? [];
+    this.timePracticeInVideo =
+      args?.timePracticeInVideo.map((item: any) => {
+        if (isObject(item.idQuestion[0])) {
+          return {
+            time: item.time,
+            totalQuestion: item.totalQuestion,
+            questionData: item.idQuestion?.map((o: any) => new Question(o)),
+            idQuestion: item.idQuestion.map((o: any) => o._id ?? ""),
+          };
+        } else
+          return {
+            time: item.time,
+            totalQuestion: item.totalQuestion,
+            idQuestion: item.idQuestion,
+          };
+      }) ?? [];
     this.type = args?.type ?? 1;
     this.des = args?.des ?? "";
     this.index = args?.index ?? 0;
