@@ -30,6 +30,9 @@ class UserInfo {
             idQuestion : string, 
             idAnswer: string
         }[], 
+        correctAnswers: {
+            idQuestion : string
+        }[], 
     }[]; // bài học đã học
     constructor(args?: any) {
         if (!args) {
