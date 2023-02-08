@@ -10,7 +10,6 @@ export default class TTCSconfig {
   static LOGIN_WAIT_FOR_EMAIL_VERIFICATION = 9;
 
   static STATUS_PUBLIC = 1;
-  static STATUS_LEARNED = 2;
   static STATUS_PRIVATE = 0;
   static STATUS_DELETED = -1;
   static STATUS_SUCCESS = 0;
@@ -18,11 +17,15 @@ export default class TTCSconfig {
   static STATUS_FAIL = -1;
   static STATUS_NO_EXIST = 2;
 
+  //trạng thái bài
+  static STATUS_LEARNED = 2;
+  static STATUS_LEARNING = 1;
+
   static GENDER_MALE = 1;
   static GENDER_FEMALE = 2;
   static GENDER_OTHER = 3;
 
-  // user role 
+  // user role
   static ROLE_ADMIN = 0;
   static ROLE_USER = 1;
 
@@ -33,9 +36,9 @@ export default class TTCSconfig {
   static TYPE_TOPIC_EXAM = 3; // đề kiểm tra
   static TYPE_TOPIC_DOCUMENT = 5; // tài liệu
 
-  // loại đề mục 
-  static TYPE_LESSON = 1 ; // chương trình học
-  static TYPE_EXAM = 2 ; // đề kiểm tra
+  // loại đề mục
+  static TYPE_LESSON = 1; // chương trình học
+  static TYPE_EXAM = 2; // đề kiểm tra
 
   static GENDERS = [
     {
