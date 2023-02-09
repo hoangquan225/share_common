@@ -44,7 +44,7 @@ class Topic {
       : [];
     this.parentId = args?.parentId ?? null;
     this.timePracticeInVideo =
-      args?.timePracticeInVideo.map((item: any) => {
+      args?.timePracticeInVideo ? args?.timePracticeInVideo?.map((item: any) => {
         if (isObject(item.idQuestion[0])) {
           return {
             time: item.time,
@@ -58,7 +58,7 @@ class Topic {
             totalQuestion: item.totalQuestion,
             idQuestion: item.idQuestion,
           };
-      }) ?? [];
+      }) : [];
     this.type = args?.type ?? 1;
     this.des = args?.des ?? "";
     this.index = args?.index ?? 0;
