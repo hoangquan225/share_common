@@ -59,4 +59,7 @@ export default class ENDPONTAPI {
   static GET_FEEDBACKS_BY_COURSE = '/loadFeedbacksByIdCourse'
   static CREATE_FEEDBACK = '/createFeedback'
   static GET_FEEDBACKS_BY_TYPE_OR_COURSE = '/loadFeedbacksByTypeOrCourse'
+
+  // statistic 
+  static LOAD_STATISTIC = '/loadStatistic'
 }
