@@ -62,4 +62,8 @@ export default class ENDPONTAPI {
 
   // statistic 
   static LOAD_STATISTIC = '/loadStatistic'
+
+  // comment 
+  static UPDATE_COMMENT = '/comment/updateComment'
+  static GET_COMMENT = '/comment/getComment'
 }
