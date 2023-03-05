@@ -20,7 +20,7 @@ class Comment {
         this.id = args?._id ?? args?.id ?? undefined;
         this.idTopic = args?.idTopic ?? null;
         this.idUser = isObject(args.idUser) ? new UserInfo(args.idUser)?._id : (args?.idUser ?? undefined);
-        this.userInfo = isObject(args.idUser) ? new UserInfo(args.idUser) : null;
+        this.userInfo = isObject(args.idUser) ? new UserInfo(args.idUser) : (args.userInfo ?? null);
         this.content = args?.content ?? '';
         this.react = args?.react ?? [];
         this.status = args?.status ?? TTCSconfig.STATUS_PUBLIC;

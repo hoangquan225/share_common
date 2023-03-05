@@ -23,7 +23,7 @@ class Lesson {
         this.des = args?.des ?? '';
         this.time = args?.time ?? null;
         this.idTopic = isObject(args.idTopic) ? new Topic(args.idTopic)?.id : (args?.idTopic ?? undefined);
-        this.dataTopic = isObject(args.idTopic) ? new Topic(args.idTopic) : null; 
+        this.dataTopic = isObject(args.idTopic) ? new Topic(args.idTopic) : (args.dataTopic ?? null); 
         this.type = args?.type ?? null;
     }
 

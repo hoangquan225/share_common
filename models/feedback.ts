@@ -19,9 +19,9 @@ class Feedback {
         this.id = args?._id ?? args?.id ?? undefined;
         this.status = args?.status ?? 0; 
         this.idQuestion = isObject(args.idQuestion) ? new Question(args.idQuestion)?.id : (args?.idQuestion ?? undefined);
-        this.dataQuestion = isObject(args.idQuestion) ? new Question(args.idQuestion) : null; 
+        this.dataQuestion = isObject(args.idQuestion) ? new Question(args.idQuestion) : (args.dataQuestion ?? null); 
         this.idUser = isObject(args.idUser) ? new UserInfo(args.idUser)?._id : (args?.idUser ?? undefined);
-        this.dataUser = isObject(args.idUser) ? new UserInfo(args.idUser) : null; 
+        this.dataUser = isObject(args.idUser) ? new UserInfo(args.idUser) : (args.dataUser ?? null); 
         this.type = args?.type ?? [];
         this.content = args?.content ?? '';
         this.idCourse = args?.idCourse ?? undefined; 

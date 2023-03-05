@@ -24,7 +24,7 @@ class Course {
         this.shortDes = args?.shortDes ?? '';
         this.slug = args?.slug ?? '';
         this.idCategory = isObject(args.idCategory) ? new Category(args.idCategory)?.id : (args?.idCategory ?? undefined);
-        this.category = isObject(args.idCategory) ? new Category(args.idCategory) : null; 
+        this.category = isObject(args.idCategory) ? new Category(args.idCategory) : (args.category ?? null); 
         this.idTag = args?.idTag ?? undefined;
         this.createDate = args?.createDate ?? undefined; 
         this.updateDate = args?.updateDate ?? undefined;
