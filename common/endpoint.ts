@@ -2,6 +2,7 @@ export default class ENDPONTAPI {
   static LOGIN = "/login";
   static REGISTER = "/register";
   static LOGOUT = "/logout";
+  static LOGIN_WITH_GOOGLE = "/login-with-google";
 
   static UPDATE_USER = "/update-user";
   static LOAD_USER_BY_ID = "/load-user-by-id";
