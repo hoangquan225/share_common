@@ -40,6 +40,9 @@ export default class TTCSconfig {
   static TYPE_LESSON = 1; // chương trình học
   static TYPE_EXAM = 2; // đề kiểm tra
 
+  // pagination
+  static LIMIT = 10; // Giới hạn phân trang
+
   static GENDERS = [
     {
       value: TTCSconfig.GENDER_MALE,
