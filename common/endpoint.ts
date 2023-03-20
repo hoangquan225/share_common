@@ -67,4 +67,5 @@ export default class ENDPONTAPI {
   // comment 
   static UPDATE_COMMENT = '/comment/updateComment'
   static GET_COMMENT = '/comment/getComment'
+  static SEND_REACTION_COMMENT = '/comment/sendReactionComment'
 }
