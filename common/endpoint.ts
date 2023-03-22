@@ -40,6 +40,7 @@ export default class ENDPONTAPI {
   static GET_QUESTIONS_BY_TOPIC = '/question/load-question-by-topic'
   static UPDATE_QUESTION = '/question/update-question'
   static ORDER_QUESTION = '/question/orderQuestion'
+  static DELETE_QUESTION = '/question/delete-question'
 
   // tag 
   static GET_TAGS_BY_STATUS = '/tag/load-tag-by-status'
