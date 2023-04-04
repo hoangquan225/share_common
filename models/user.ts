@@ -12,6 +12,7 @@ class UserInfo {
     avatar?: string;
     address?: string;
     facebookId?: string;
+    googleId?: string;
     birth?: number;
     gender?: number;
     registerDate?: number;
@@ -46,6 +47,7 @@ class UserInfo {
         this.password = args.password ?? "";
         this.address = args.address ?? "";
         this.facebookId = args.facebookId ?? "";
+        this.googleId = args.googleId ?? "";
         this.birth = args.birth ?? 0;
         this.gender = args.gender ?? TTCSconfig.GENDER_MALE;
         this.registerDate = args.registerDate ?? 0;
