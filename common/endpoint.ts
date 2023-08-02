@@ -70,4 +70,7 @@ export default class ENDPONTAPI {
   static DELETE_COMMENT = '/comment/deleteComment'
   static GET_COMMENT = '/comment/getComment'
   static SEND_REACTION_COMMENT = '/comment/sendReactionComment'
+
+  //topic-progress 
+  static UPDATE_PROGRESS = "/topic-progress/upsert"
 }
