@@ -11,7 +11,9 @@ class TopicProgress {
     answers: {
         idQuestion: string,
         idAnswer: string
-    }[]
+    }[];
+    lastUpdate: number | null;
+    createDate: number | null
 
     constructor(args?: any) {
         if (!args) {
@@ -25,6 +27,8 @@ class TopicProgress {
         this.score = args.score ?? 0;
         this.correctQuestion = args.correctQuestion ?? 0;
         this.answers = args.answers ?? [];
+        this.lastUpdate = args.lastUpdate ?? null;
+        this.createDate = args.createDate ?? null
     }
 }
 
