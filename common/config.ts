@@ -20,6 +20,7 @@ export default class TTCSconfig {
   //trạng thái bài
   static STATUS_LEARNED = 2;
   static STATUS_LEARNING = 1;
+  static STATUS_LEARN_NONE = -1; // Chưa học
 
   static GENDER_MALE = 1;
   static GENDER_FEMALE = 2;
