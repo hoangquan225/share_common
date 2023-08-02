@@ -37,11 +37,12 @@ class Topic {
         ? args.topicChild?.map((o: any) => o._id ?? "")
         : args?.topicChild
       : [];
-    this.topicChildData = args?.topicChild
-      ? isObject(args.topicChild[0])
-        ? args.topicChild?.map((o: any) => new Topic(o))
-        : (args.topicChildData?.length ? args.topicChildData : [])
-      : (args.topicChildData?.length ? args.topicChildData : []);
+    // this.topicChildData = !!args?.topicChild
+    //   ? isObject(args.topicChild[0])
+    //     ? args.topicChild?.map((o: any) => new Topic(o))
+    //     : (args.topicChildData?.length ? args.topicChildData : [])
+    //   : (args.topicChildData?.length ? args.topicChildData : []);
+    this.topicChildData = args?.topicChildData;
     this.parentId = args?.parentId ?? null;
     this.timePracticeInVideo =
       args?.timePracticeInVideo ? args?.timePracticeInVideo?.map((item: any) => {
