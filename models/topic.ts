@@ -42,7 +42,7 @@ class Topic {
     //     ? args.topicChild?.map((o: any) => new Topic(o))
     //     : (args.topicChildData?.length ? args.topicChildData : [])
     //   : (args.topicChildData?.length ? args.topicChildData : []);
-    this.topicChildData = args?.topicChildData;
+    this.topicChildData = args?.topicChildData || args?.topicChild?.map((o: any) => new Topic(o));
     this.parentId = args?.parentId ?? null;
     this.timePracticeInVideo =
       args?.timePracticeInVideo ? args?.timePracticeInVideo?.map((item: any) => {
