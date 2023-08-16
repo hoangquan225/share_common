@@ -45,21 +45,24 @@ class Topic {
     this.topicChildData = args?.topicChildData || args?.topicChild?.map((o: any) => new Topic(o));
     this.parentId = args?.parentId ?? null;
     this.timePracticeInVideo =
-      args?.timePracticeInVideo ? args?.timePracticeInVideo?.map((item: any) => {
-        if (isObject(item.idQuestion[0])) {
-          return {
-            time: item.time,
-            totalQuestion: item.totalQuestion,
-            questionData: item.idQuestion?.map((o: any) => new Question(o)),
-            idQuestion: item.idQuestion.map((o: any) => o._id ?? ""),
-          };
-        } else
-          return {
-            time: item.time,
-            totalQuestion: item.totalQuestion,
-            idQuestion: item.idQuestion,
-          };
-      }) : [];
+      args?.timePracticeInVideo 
+      ? 
+        args?.timePracticeInVideo?.map((item: any) => {
+          if (isObject(item.idQuestion[0])) {
+            return {
+              time: item.time,
+              totalQuestion: item.totalQuestion,
+              questionData: item.idQuestion?.map((o: any) => new Question(o)),
+              idQuestion: item.idQuestion.map((o: any) => o._id ?? ""),
+            };
+          } else
+            return {
+              time: item.time,
+              totalQuestion: item.totalQuestion,
+              idQuestion: item.idQuestion,
+            };
+        })
+      : [];
     this.type = args?.type ?? 1;
     this.des = args?.des ?? "";
     this.index = args?.index ?? 0;
