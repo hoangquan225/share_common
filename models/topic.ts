@@ -60,6 +60,7 @@ class Topic {
               time: item.time,
               totalQuestion: item.totalQuestion,
               idQuestion: item.idQuestion,
+              questionData: item.questionData
             };
         })
       : [];
