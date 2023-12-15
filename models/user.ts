@@ -12,6 +12,7 @@ class UserInfo {
     avatar?: string;
     address?: string;
     facebookId?: string;
+    googleId?: string;
     birth?: number;
     gender?: number;
     registerDate?: number;
@@ -20,17 +21,19 @@ class UserInfo {
     lastLogin?: number;
     status?:number;
     userRole?:number; // 1 user, 0 : admin
-    progess ?: {
-        idTopic: string, // id bài học
-        status: number, // trạng thái đã học, chưa học, đang học
-        timeStudy: number, // thời gian học bài đó (tính bằng giây)
-        score: number,
-        correctQuestion: number,
-        answers: {
-            idQuestion : string, 
-            idAnswer: string
+    progress ?: {
+        [courseId:string]: {
+            idTopic: string, // id bài học
+            status: number, // trạng thái đã học, chưa học, đang học
+            timeStudy: number, // thời gian học bài đó (tính bằng giây)
+            score: number,
+            correctQuestion: number,
+            answers: {
+                idQuestion : string, 
+                idAnswer: string
+            }[]
         }[]
-    }[]; // bài học đã học
+    }; // bài học đã học
     constructor(args?: any) {
         if (!args) {
             args = {};
@@ -46,6 +49,7 @@ class UserInfo {
         this.password = args.password ?? "";
         this.address = args.address ?? "";
         this.facebookId = args.facebookId ?? "";
+        this.googleId = args.googleId ?? "";
         this.birth = args.birth ?? 0;
         this.gender = args.gender ?? TTCSconfig.GENDER_MALE;
         this.registerDate = args.registerDate ?? 0;
@@ -53,7 +57,7 @@ class UserInfo {
         this.lastLogin = args.lastLogin ?? Date.now()
         this.status = args.status ?? 1;
         this.userRole = args?.userRole ?? 1;
-        this.progess = args.progess ?? undefined;
+        this.progress = args.progress ?? undefined;
     }
 }
 
