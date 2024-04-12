@@ -6,6 +6,7 @@ export default class TTCSconfig {
   static LOGIN_WRONG_PASSWORD = 3;
   static LOGIN_WRONG_PROVIDER = 4;
   static LOGIN_ACCOUNT_NOT_ACTIVATED = 5;
+  static LOGIN_EMAIL_IS_USED = 7;
   static LOGIN_TOKEN_INVALID = 8;
   static LOGIN_WAIT_FOR_EMAIL_VERIFICATION = 9;
 
@@ -41,8 +42,8 @@ export default class TTCSconfig {
   static TYPE_LESSON = 1; // chương trình học
   static TYPE_EXAM = 2; // đề kiểm tra
 
-  static LIMIT = 10; 
-  static PAGE_SIZE = 10; 
+  static LIMIT = 10;
+  static PAGE_SIZE = 10;
 
   static GENDERS = [
     {

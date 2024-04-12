@@ -3,6 +3,9 @@ export default class ENDPONTAPI {
   static REGISTER = "/register";
   static LOGOUT = "/logout";
   static LOGIN_WITH_GOOGLE = "/login-with-google";
+  static FORGOT_PASSWORD = '/forgot-password';
+  static RESET_PASSWORD = '/reset-password';
+  static CHECK_TOKEN_EXPIRES = '/check-token-expires';
 
   static UPDATE_USER = "/update-user";
   static LOAD_USER_BY_ID = "/load-user-by-id";
@@ -29,6 +32,7 @@ export default class ENDPONTAPI {
   static GET_COURSES_BY_ID_CATEGORY = '/course/load-course-by-id-category'
   static GET_COURSES_BY_ID_TAG_AND_CATEGORY = '/course/load-course-by-id-tag-and-category'
   static GET_COURSE_BY_SLUG = '/course/getCoursesBySlug'
+  static GET_INFO_TOPIC_BY_COURSE = '/course/getInfoTopicByCourse'
 
   // lesson 
   static GET_LESSONS_BY_STATUS = '/lesson/load-lesson-by-status'
