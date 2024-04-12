@@ -21,6 +21,7 @@ class UserInfo {
     lastLogin?: number;
     status?:number;
     userRole?:number; // 1 user, 0 : admin
+    passwordResetExpires: number;
     progress ?: {
         [courseId:string]: {
             idTopic: string, // id bài học
@@ -58,6 +59,7 @@ class UserInfo {
         this.status = args.status ?? 1;
         this.userRole = args?.userRole ?? 1;
         this.progress = args.progress ?? undefined;
+        this.passwordResetExpires = args?.passwordResetExpires ?? 0;
     }
 }
 
