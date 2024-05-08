@@ -75,6 +75,12 @@ export default class ENDPONTAPI {
   static GET_COMMENT = '/comment/getComment'
   static SEND_REACTION_COMMENT = '/comment/sendReactionComment'
 
+  // chat 
+  static UPDATE_CHAT= '/chat/updateChat'
+  static DELETE_CHAT= '/chat/deleteChat'
+  static GET_CHAT= '/chat/getChat'
+  static SEND_REACTION_CHAT= '/chat/sendReactionChat'
+
   //topic-progress 
   static UPDATE_PROGRESS = "/topic-progress/upsert"
 }
