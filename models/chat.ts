@@ -2,7 +2,7 @@ import TTCSconfig from "../common/config";
 import { isObject } from "../utils/validation";
 import { UserInfo } from "./user";
 
-class Chat {
+class Message {
     id?: string | undefined;
     idChat: string | undefined;
     userIdSend: string | undefined;
@@ -34,4 +34,4 @@ class Chat {
     }
 }
 
-export { Chat };
+export { Message };
