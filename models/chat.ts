@@ -5,7 +5,9 @@ import { UserInfo } from "./user";
 class Chat {
     id?: string | undefined;
     idChat: string | undefined;
-    idUser: string | undefined;
+    userIdSend: string | undefined;
+    userIdReceive: string | undefined;
+    users: String[];
     content: string;
     react?: {
         type: number,
@@ -19,8 +21,10 @@ class Chat {
     constructor(args?: any) {
         this.id = args?._id ?? args?.id ?? undefined;
         this.idChat = args?.idChat ?? null;
-        this.idUser = isObject(args.idUser) ? new UserInfo(args.idUser)?._id : (args?.idUser ?? undefined);
-        this.userInfo = isObject(args.idUser) ? new UserInfo(args.idUser) : (args.userInfo ?? null);
+        this.userIdSend = isObject(args.userIdSend) ? new UserInfo(args.userIdSend)?._id : (args?.userIdSend ?? undefined);
+        this.userIdReceive = isObject(args.userIdReceive) ? new UserInfo(args.userIdReceive)?._id : (args?.userIdReceive ?? undefined);
+        this.userInfo = isObject(args.userIdSend) ? new UserInfo(args.userIdSend) : (args.userInfo ?? null);
+        this.users = args?.users ?? [];
         this.content = args?.content ?? '';
         this.react = args?.react ?? [];
         this.status = args?.status ?? TTCSconfig.STATUS_PUBLIC;
