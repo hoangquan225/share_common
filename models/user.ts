@@ -35,6 +35,8 @@ class UserInfo {
             }[]
         }[]
     }; // bài học đã học
+    verification_code?: string;
+    verification_created_at?: number
     constructor(args?: any) {
         if (!args) {
             args = {};
@@ -60,6 +62,8 @@ class UserInfo {
         this.userRole = args?.userRole ?? 1;
         this.progress = args.progress ?? undefined;
         this.passwordResetExpires = args?.passwordResetExpires ?? 0;
+        this.verification_code = args.verification_code;
+        this.verification_created_at = args.verification_created_at;
     }
 }
 
